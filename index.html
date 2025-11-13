@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>25 Random Song Recommendation</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #1a1a1a 0%, #000 100%);
+            color: #fff;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 650px;
+            width: 100%;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 40px;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            text-shadow: 0 0 20px rgba(255,255,255,0.3);
+        }
+
+        .song-link {
+            background: linear-gradient(135deg, #ffffff 0%, #e0e0e0 100%);
+            color: #000;
+            text-decoration: none;
+            display: block;
+            padding: 18px 25px;
+            margin-bottom: 15px;
+            border: 2px solid #fff;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            position: relative;
+            box-shadow: 0 4px 15px rgba(255,255,255,0.1);
+            overflow: hidden;
+        }
+
+        .song-link::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+            transition: left 0.5s;
+        }
+
+        .song-link:hover::before {
+            left: 100%;
+        }
+
+        .song-link:hover {
+            background: linear-gradient(135deg, #000 0%, #1a1a1a 100%);
+            color: #fff;
+            transform: translateX(10px) scale(1.02);
+            box-shadow: 0 8px 30px rgba(255,255,255,0.2);
+            border-color: #fff;
+        }
+
+        .song-title {
+            font-size: 1.15rem;
+            font-weight: bold;
+            margin-bottom: 4px;
+        }
+
+        .song-artist {
+            font-size: 0.9rem;
+            margin-bottom: 4px;
+            opacity: 0.8;
+        }
+
+        .song-album {
+            font-size: 0.8rem;
+            margin-bottom: 6px;
+            opacity: 0.7;
+            font-style: italic;
+        }
+
+        .song-meta {
+            font-size: 0.75rem;
+            opacity: 0.6;
+            font-style: italic;
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.5rem;
+                letter-spacing: 2px;
+            }
+
+            .song-link {
+                padding: 15px 20px;
+            }
+
+            .song-title {
+                font-size: 1rem;
+            }
+
+            .song-meta {
+                font-size: 0.7rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>25 Random Song Recommendation</h1>
+        
+        <a href="https://youtu.be/GHPkJkBS1vE?si=FM3X9QaUZh4eAmK" target="_blank" class="song-link">
+            <div class="song-title">March of the Pig</div>
+            <div class="song-artist">Nine Inch Nails</div>
+            <div class="song-album">Album: The Downward Spiral</div>
+            <div class="song-meta">Industrial Rock • 1994</div>
+        </a>
+
+        <a href="https://youtu.be/FkDvkR5l1egsi=ZIFUZWKbkAqrpkWH" target="_blank" class="song-link">
+            <div class="song-title">Colors</div>
+            <div class="song-artist">Pharoah Sanders</div>
+            <div class="song-album">Album: Karma</div>
+            <div class="song-meta">Spiritual Jazz • 1969</div>
+        </a>
+
+        <a href="https://youtu.be/AnFFEF2gOYUsi=kmmHLAxM0fLy102v" target="_blank" class="song-link">
+            <div class="song-title">Storm</div>
+            <div class="song-artist">Godspeed You! Black Emperor</div>
+            <div class="song-album">Album: Lift Your Skinny Fists Like Antennas to Heaven</div>
+            <div class="song-meta">Post-Rock • 2000</div>
+        </a>
+
+        <a href="https://youtu.be/WDtH__GYbrA?si=1eSipSeAmK14O4Nm" target="_blank" class="song-link">
+            <div class="song-title">Shadow of Planes</div>
+            <div class="song-artist">Duster</div>
+            <div class="song-album">Album: Stratosphere</div>
+            <div class="song-meta">Slowcore, Dream Pop • 1998</div>
+        </a>
+
+        <a href="https://youtu.be/ZVKXnWDeNr8?si=tSmiOn1VC05g42Dl" target="_blank" class="song-link">
+            <div class="song-title">Electricity</div>
+            <div class="song-artist">Spiritualized</div>
+            <div class="song-album">Album: Ladies and Gentlemen We Are Floating in Space</div>
+            <div class="song-meta">Space Rock, Neo-Psychedelia • 1997</div>
+        </a>
+
+        <a href="https://youtu.be/7-mFsGm1uvQ?si=iqpopJY7lTu0T0Zi" target="_blank" class="song-link">
+            <div class="song-title">Eclipse</div>
+            <div class="song-artist">Pink Floyd</div>
+            <div class="song-album">Album: The Dark Side of the Moon</div>
+            <div class="song-meta">Progressive Rock • 1973</div>
+        </a>
+
+        <a href="https://youtu.be/hcOhXThqh_0?si=B1aDxaXMhkYhSdiI" target="_blank" class="song-link">
+            <div class="song-title">When You Sleep</div>
+            <div class="song-artist">My Bloody Valentine</div>
+            <div class="song-album">Album: Loveless</div>
+            <div class="song-meta">Shoegaze, Noise Pop • 1991</div>
+        </a>
+
+        <a href="https://youtu.be/tBemAEmzOqU?si=u4pwnYXmC_H03l0u" target="_blank" class="song-link">
+            <div class="song-title">ワールドイズユアーズ</div>
+            <div class="song-artist">MASS OF THE FERMENTING DREGS</div>
+            <div class="song-album">Album: World Is Yours</div>
+            <div class="song-meta">Alternative Rock, Shoegaze • 2007</div>
+        </a>
+
+        <a href="https://youtu.be/4RaR210hglo?si=5a9Ee3VgUXss_zPE" target="_blank" class="song-link">
+            <div class="song-title">Night in Tunisia</div>
+            <div class="song-artist">Jesus Molina</div>
+            <div class="song-album">Album: Live at Berklee</div>
+            <div class="song-meta">Jazz • 2017</div>
+        </a>
+
+        <a href="https://youtu.be/B_bYIWexH5Q?si=2z1NstlvWUBvMB-b" target="_blank" class="song-link">
+            <div class="song-title">A Bird's Last Look</div>
+            <div class="song-artist">Macabre Plaza</div>
+            <div class="song-album">Album: The Nightfall</div>
+            <div class="song-meta">Ambient, Experimental • 2020</div>
+        </a>
+
+        <a href="https://youtu.be/O7-We8D22KQ?si=Uq1QMQnShhSlMWkz" target="_blank" class="song-link">
+            <div class="song-title">Szerencsétlen</div>
+            <div class="song-artist">Venetian Snares</div>
+            <div class="song-album">Album: Rossz Csillag Alatt Született</div>
+            <div class="song-meta">Breakcore, IDM • 2005</div>
+        </a>
+
+        <a href="https://youtu.be/f45yDddYePg?si=QL7-sqAwZy7kTw8O" target="_blank" class="song-link">
+            <div class="song-title">The Downward Spiral</div>
+            <div class="song-artist">Nine Inch Nails</div>
+            <div class="song-album">Album: The Downward Spiral</div>
+            <div class="song-meta">Industrial Rock • 1994</div>
+        </a>
+
+        <a href="https://youtu.be/R5dphZnPb9A?si=RBqJE-TX3fPjT9WP" target="_blank" class="song-link">
+            <div class="song-title">Lady Brown</div>
+            <div class="song-artist">Nujabes</div>
+            <div class="song-album">Album: Metaphorical Music</div>
+            <div class="song-meta">Jazz Hop, Lo-Fi Hip Hop • 2003</div>
+        </a>
+
+        <a href="https://youtu.be/SW9H1b7zXUY?si=05dzd2lB8z-dso9A" target="_blank" class="song-link">
+            <div class="song-title">Get Got</div>
+            <div class="song-artist">Death Grips</div>
+            <div class="song-album">Album: The Money Store</div>
+            <div class="song-meta">Experimental Hip Hop • 2012</div>
+        </a>
+
+        <a href="https://youtu.be/aYcqYIjqvz0?si=DSIsy9N4humBGR41" target="_blank" class="song-link">
+            <div class="song-title">Ultra Truth</div>
+            <div class="song-artist">Daniel Avery</div>
+            <div class="song-album">Album: Ultra Truth</div>
+            <div class="song-meta">Techno, Electronic • 2022</div>
+        </a>
+
+        <a href="https://youtu.be/CxKWTzr-k6s?si=CUhGKSA5AkvRQQpv" target="_blank" class="song-link">
+            <div class="song-title">Even Flow</div>
+            <div class="song-artist">Pearl Jam</div>
+            <div class="song-album">Album: Ten</div>
+            <div class="song-meta">Grunge, Alternative Rock • 1991</div>
+        </a>
+
+        <a href="https://youtu.be/tymWpEU8wpM?si=2pf09nAm3YsazzXi" target="_blank" class="song-link">
+            <div class="song-title">This Love</div>
+            <div class="song-artist">Pantera</div>
+            <div class="song-album">Album: Vulgar Display of Power</div>
+            <div class="song-meta">Groove Metal • 1992</div>
+        </a>
+
+        <a href="https://youtu.be/WLubS6QOMsQ?si=8JNqq9Gwg_k5Yjcm" target="_blank" class="song-link">
+            <div class="song-title">Eyeless</div>
+            <div class="song-artist">Slipknot</div>
+            <div class="song-album">Album: Slipknot</div>
+            <div class="song-meta">Nu Metal • 1999</div>
+        </a>
+
+        <a href="https://youtu.be/vabnZ9-ex7o?si=Fj84GPI4kwAb9kUK" target="_blank" class="song-link">
+            <div class="song-title">Come As You Are</div>
+            <div class="song-artist">Nirvana</div>
+            <div class="song-album">Album: Nevermind</div>
+            <div class="song-meta">Grunge, Alternative Rock • 1991</div>
+        </a>
+
+        <a href="https://youtu.be/OfR6_V91fG8?si=Fjn4aFUIEIUwUBq6" target="_blank" class="song-link">
+            <div class="song-title">Starless</div>
+            <div class="song-artist">King Crimson</div>
+            <div class="song-album">Album: Red</div>
+            <div class="song-meta">Progressive Rock • 1974</div>
+        </a>
+
+        <a href="https://youtu.be/r4iEq-IXqfw?si=mlCTLmV323dHTZVR" target="_blank" class="song-link">
+            <div class="song-title">Bocanada</div>
+            <div class="song-artist">Gustavo Cerati</div>
+            <div class="song-album">Album: Bocanada</div>
+            <div class="song-meta">Art Rock, Electronic • 1999</div>
+        </a>
+
+        <a href="https://youtu.be/MKYY0IlTMw4?si=F7xi7GFy6veSTxLx" target="_blank" class="song-link">
+            <div class="song-title">When the Sun Hits</div>
+            <div class="song-artist">Slowdive</div>
+            <div class="song-album">Album: Souvlaki</div>
+            <div class="song-meta">Shoegaze, Dream Pop • 1993</div>
+        </a>
+
+        <a href="https://youtu.be/2aW7HweAf3o?si=Pt0aH43NAQYgFLvW" target="_blank" class="song-link">
+            <div class="song-title">Money</div>
+            <div class="song-artist">Pink Floyd</div>
+            <div class="song-album">Album: The Dark Side of the Moon</div>
+            <div class="song-meta">Progressive Rock • 1973</div>
+        </a>
+
+        <a href="https://youtu.be/Orlbo9WkZ2E?si=Z33_eRwvyqDiY6AV" target="_blank" class="song-link">
+            <div class="song-title">Guillotine</div>
+            <div class="song-artist">Death Grips</div>
+            <div class="song-album">Album: Exmilitary</div>
+            <div class="song-meta">Experimental Hip Hop • 2011</div>
+        </a>
+
+        <a href="https://youtu.be/3N5qQrGSuJ4?si=aTC0Gmt6Gl4Yoms5" target="_blank" class="song-link">
+            <div class="song-title">The Great Curve</div>
+            <div class="song-artist">Talking Heads</div>
+            <div class="song-album">Album: Remain in Light</div>
+            <div class="song-meta">New Wave, Post-Punk • 1980</div>
+        </a>
+    </div>
+</body>
+</html>
